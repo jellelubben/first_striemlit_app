@@ -46,7 +46,7 @@ def get_fruit_load_list():
 	with my_cnx.cursor() as my_cur:
 		streamlit.text("test2.2")
 		my_cur.execute("select * from fruit_load_list")
-		streamlit.text("test2.3")
+		streamlit.text("test2.3:" + my_cur.fetchall())
 		return my_cur.fetchall()
   
 if streamlit.button('Get fruit load list'):
