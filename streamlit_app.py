@@ -70,4 +70,5 @@ if streamlit.button( 'add a fruit to the list'):
 	back_from_function = insert_row_into_snowflake (add_my_fruit)
 	streamlit.text(back_from_function)
 # my_cur.execute("insert into fruit_load_list(fruit_name) values('"+ add_my_fruit + "')")
-# my_cur.execute("delete from fruit_load_list where fruit_name='' or fruit_name IS NULL")
+my_cur.execute("delete from fruit_load_list where fruit_name='' or fruit_name IS NULL or fruit_name like 'test' or fruit_name like 'from_streamlit'")
+
