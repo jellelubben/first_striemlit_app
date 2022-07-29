@@ -42,7 +42,7 @@ streamlit.dataframe(my_data_row)
 
 add_my_fruit = streamlit.text_input('What fruit would you like to add to the list?')
 streamlit.write('The user entered ', add_my_fruit)
-my_cur.execute("select * from fruit_load_list where fruit_name = banana")
+my_cur.execute("select * from fruit_load_list where fruit_name = 'banana'")
 my_data_row = my_cur.fetchall()
 streamlit.header("The fruit list contains:")
 streamlit.dataframe(my_data_row)
